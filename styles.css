@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Monoton&display=swap');
+
+body {
+    margin: 0;
+    background:url(/images/crystalBG.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+}
+
+.container {
+    margin-top: 100px;
+    height: 900px;
+    width: 800px;
+    background-color: rgba(21, 21, 22, 0.8);
+    border-radius: 15px;
+    border: outset rgb(55, 54, 56);
+}
+
+header {
+    height: 200px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: linear-gradient(rgb(162, 158, 173), rgba(23, 22, 25, 0));
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 50px;
+    font-family: 'Monoton', sans-serif;
+    color: pink;
+    font-weight: 500;
+    word-spacing: 20px;
+    text-transform: uppercase;
+    word-wrap: wrap;
+    text-shadow: 0px 2px 4px black;
+    animation: gloweffect 3s infinite;
+}
+
+@keyframes gloweffect {
+    0%, 100% {filter: drop-shadow(0 0 0.35rem rgb(211, 158, 245));}
+    50% {filter: drop-shadow(0 0 0.75rem rgb(196, 118, 245));}
+}
+
+main {
+    margin: 0px 50px;
+    background: rgb(69, 68, 68);
+    border: inset rgb(55, 54, 56);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 4px rgb(0, 0, 0);
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+#avatars {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.avatar-img {
+    margin-bottom: 20px;
+    width: 130px;
+    height: 130px;
+    background-color: rgb(217, 239, 244);
+    border: 3px outset pink;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    margin: 0px 30px;
+    width: 100px;
+    height: 100px;
+}
+
+.avatar-img:hover {
+    animation: gloweffect 2s infinite;
+}
+
+.choosen-avatar {
+    animation: clicked 2s infinite;
+}
+
+@keyframes clicked {
+    0%, 100% {filter: drop-shadow(0 0 0.35rem rgb(132, 47, 98));}
+    50% {filter: drop-shadow(0 0 0.75rem rgb(185, 35, 133));}
+}
+
+#error-message {
+    text-align: center;
+    position: sticky;
+    top: 50px;
+    height: 0;
+    letter-spacing: 3px;
+    color: red;
+}
+
+#error-message-avatar {
+    display: none;
+}
+
+#error-message-username {
+    display: none;
+}
+
+.create-player {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#username-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#username-container input {
+    margin: 0px 10px;
+    width: 89%;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0);
+}
+
+#username-container input:hover{
+    animation: gloweffect 2s infinite;
+}
+
+.glow {
+    animation: gloweffect 2s infinite;
+}
+
+#btn-start-game {
+    margin: 40px 10px 20px 10px;
+    width: 90%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: pink;
+    letter-spacing: 3px;
+    font-family: 'Monoton', sans-serif;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 3px outset rgb(246, 220, 220);
+    box-shadow: 0px 2px 4px rgb(0, 0, 0);;
+}
+
+#btn-start-game:hover {
+    animation: gloweffect 2s infinite;
+}
+
+footer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 830px) {
+
+    .container {
+        margin-top: auto auto;
+        width: 95%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        margin-top: 0;
+    }
+    .container {
+        margin-top: 0;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    header {
+        border-radius: 0;
+    }
+
+    main {
+        margin: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    .avatar {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+      .avatar-img {
+        margin: 5px;
+        width: 100px;
+        height: 100px;
+    }
+}
